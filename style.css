@@ -1,0 +1,173 @@
+/* 无记 · Flow v1.0.0
+   复刻 wuji v2.0.1 视觉骨架，米白底 + 朱砂 + 杉本博司留白。
+   主区: 框架/步骤列表 grid。
+*/
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg-base: #faf7f0;
+    --text-primary: #000000;
+    --text-muted: #6b6b6b;
+    --line-subtle: rgba(0,0,0,0.06);
+    --accent: #8b1a1a;
+    --font-serif: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
+    --container: 1160px;
+}
+
+html, body { min-height: 100%; }
+
+body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.site-header {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo a {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--text-primary);
+    transition: color 0.2s ease;
+}
+.logo a:hover { color: var(--accent); }
+
+.primary-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.primary-nav a {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+    transition: color 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.primary-nav a:hover { color: var(--accent); }
+.primary-nav .active a {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.page-content {
+    min-height: calc(100vh - 88px);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 8px 40px 40px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    color: var(--text-primary);
+    margin: 4px 0 6px;
+}
+
+.page-sub {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+}
+
+.flow-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 36px 28px;
+    padding: 0;
+    text-align: left;
+}
+
+.flow-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 20px;
+    border-top: 1px solid var(--line-subtle);
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.flow-card:hover { transform: translateY(-2px); }
+
+.flow-step {
+    font-family: var(--font-serif);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+.flow-title {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+.flow-desc {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.flow-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--text-muted);
+    padding: 40px 0;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 900px) {
+    .site-header { padding: 24px 20px; }
+    .primary-nav ul { gap: 18px; }
+    .primary-nav a { font-size: 0.8rem; }
+    .page-content { padding: 8px 20px 40px; }
+    .flow-grid { gap: 28px 20px; }
+}
+
+@media (max-width: 600px) {
+    .site-header { flex-direction: column; gap: 16px; padding: 20px 16px; }
+    .logo a { font-size: 18px; }
+    .primary-nav ul { gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .primary-nav a { font-size: 0.75rem; }
+    .page-content { padding: 8px 16px 32px; }
+    .flow-grid { grid-template-columns: 1fr; gap: 20px; }
+    .page-title { font-size: 1.3rem; letter-spacing: 0.3em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
