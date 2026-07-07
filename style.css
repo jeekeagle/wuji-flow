@@ -1,4 +1,4 @@
-/* 无记 · Flow v1.0.1
+/* 无记 · Flow v1.0.2
    复刻 wuji v2.0.1 视觉骨架，米白底 + 朱砂 + 杉本博司留白。
    主区: 框架/步骤列表 grid。
 */
@@ -190,6 +190,89 @@ a { color: inherit; text-decoration: none; }
     .page-title { font-size: 1.3rem; letter-spacing: 0.3em; }
 }
 
+
+/* ===== Article page ===== */
+
+.article-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 40px 80px;
+    text-align: center;
+}
+
+.article-demo-banner {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.72rem;
+    color: var(--accent);
+    border: 1px dashed var(--line-subtle);
+    padding: 4px 12px;
+    margin-bottom: 32px;
+    letter-spacing: 0.05em;
+    background: rgba(139, 26, 26, 0.04);
+}
+
+.article-step {
+    font-family: var(--font-serif);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.article-title {
+    font-family: var(--font-serif);
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 8px 0 6px;
+}
+
+.article-date {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.article-body {
+    text-align: left;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text-primary);
+}
+.article-body p {
+    margin-bottom: 1.2em;
+}
+
+.article-back {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-subtle);
+    text-align: center;
+}
+.article-back a {
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    transition: color 0.25s ease;
+}
+.article-back a:hover { color: var(--accent); }
+
+@media (max-width: 600px) {
+    .article-page { padding: 24px 20px 60px; }
+    .article-title { font-size: 1.4rem; }
+    .article-body { font-size: 0.95rem; line-height: 1.75; }
+}
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
