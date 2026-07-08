@@ -1,4 +1,4 @@
-/* 无记 · Flow v1.1.1
+/* 无记 · Flow v1.2.0
    复刻 wuji v2.0.1 视觉骨架，米白底 + 朱砂 + 杉本博司留白。
    主区: 框架/步骤列表 grid。
 */
@@ -11,7 +11,11 @@
     --text-muted: #6b6b6b;
     --line-subtle: rgba(0,0,0,0.06);
     --accent: #8b1a1a;
-    --font-serif: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
+    --font-serif: "Inter", "LXGW WenKai Screen", "LXGW WenKai", "霞鹜文楷",
+                  "Noto Serif SC", "Source Han Serif SC", "Songti SC",
+                  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", "Source Code Pro",
+                  Consolas, Monaco, "Courier New", monospace;
     --container: 1160px;
 }
 
