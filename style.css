@@ -1,4 +1,4 @@
-/* 无记 · Flow v1.1.0
+/* 无记 · Flow v1.1.1
    复刻 wuji v2.0.1 视觉骨架，米白底 + 朱砂 + 杉本博司留白。
    主区: 框架/步骤列表 grid。
 */
@@ -245,7 +245,7 @@ a { color: inherit; text-decoration: none; }
 .article-body {
     text-align: left;
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 1.286rem;       /* +4px from 1rem (14px → 18px) */
     line-height: 1.85;
     color: var(--text-primary);
 }
@@ -271,7 +271,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 600px) {
     .article-page { padding: 24px 20px 60px; }
     .article-title { font-size: 1.4rem; }
-    .article-body { font-size: 0.95rem; line-height: 1.75; }
+    .article-body { font-size: 1.236rem; line-height: 1.75; }
 }
 
 /* ===== Article gallery (added v1.1.0) ===== */
